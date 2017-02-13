@@ -1,0 +1,9 @@
+@import '../node_modules/foundation-sites/scss/foundation';
+@include foundation-everything;
+
+$font-stack: Helvetica, Arial, sans-serif;
+
+
+body {
+   font: 100% $font-stack;
+}
