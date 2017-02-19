@@ -28,7 +28,7 @@
     Salasana:<br>
     <input title="Salasana" type="password" name="passwd"
     value="">
-    <button name="btn" value="1">Kirjaudu</button>
+    <button name="btn" value="1"><strong>Kirjaudu</strong></button>
     </form>
 
     </div>

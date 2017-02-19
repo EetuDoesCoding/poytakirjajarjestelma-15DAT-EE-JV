@@ -27,12 +27,9 @@
     <a href="javascript:void(0)" class="dropbtn"
     onclick="myFunction()">Kirjaudu</a>
     <div class="dropdown-content" id="myDropdown">
-    
-    Käyttäjätunnus:<br>
-    
-    Salasana:<br>
-    
-    <button onclick="window.location.href='?kill=user'">Kirjaudu Ulos</button>
+    <p>Kirjauduttu hallintapaneeliin
+    <br><br>
+    <button onclick="window.location.href='?kill=user'"><strong>Kirjaudu Ulos</strong></button>
     
     </div>
   </li>

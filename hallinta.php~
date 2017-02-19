@@ -1,3 +1,8 @@
+<?php
+
+  include("config.php");
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,39 +27,10 @@
     <a href="javascript:void(0)" class="dropbtn"
     onclick="myFunction()">Kirjaudu</a>
     <div class="dropdown-content" id="myDropdown">
-    <form autocomplete="off" method="POST">
-    Käyttäjätunnus:<br>
-    <input type="input" name="käyttajatunnus" value="" placeholder="Käyttäjätunnus">
-    Salasana:<br>
-    <input title="Salasana" type="password" name="salasana"
-    value="">
-    <button class="primary button" type="send">Kirjaudu</button>
-    </form>
-    <?php
-  
-  $kt = $_POST['kayttajatunnus'];
-  $ss = $_POST['salasana'];
-  $send = $_POST['send'];
-
-  if($send=='true') {
-  
-  $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
-
-  if($my->mysql_errno) {
-  die("MySQL, virhe yhdeyden luonnissa:" . $my->connect_error);
-  }
-
-  $my->set_charset('utf8');
-  $result = $my->query('SELECT kayttajatunnus, salasana
-                        FROM 6659_kayttajat
-                        WHERE kayttajatunnus = '.$kt.'
-                        AND salasana = '.$ss.' ');
-
-  
-  $my->close();
-  }
-
-  ?>
+    <p>Kirjauduttu hallintapaneeliin
+    <br>
+    <button onclick="window.location.href='?kill=user'"><strong>Kirjaudu Ulos</strong></button>
+    
     </div>
   </li>
 </ul>
@@ -74,6 +50,8 @@ toggle between hiding and showing the dropdown content */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
+
+
 
 </script>
 </body>

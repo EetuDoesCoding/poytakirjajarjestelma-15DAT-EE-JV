@@ -22,39 +22,15 @@
     <a href="javascript:void(0)" class="dropbtn"
     onclick="myFunction()">Kirjaudu</a>
     <div class="dropdown-content" id="myDropdown">
-    <form autocomplete="off" method="POST">
+    <form autocomplete="off" method="POST" action="hallinta.php">
     Käyttäjätunnus:<br>
-    <input type="input" name="käyttajatunnus" value="" placeholder="Käyttäjätunnus">
+    <input type="input" name="login" value="" placeholder="Käyttäjätunnus">
     Salasana:<br>
-    <input title="Salasana" type="password" name="salasana"
+    <input title="Salasana" type="password" name="passwd"
     value="">
-    <button class="primary button" type="send">Kirjaudu</button>
+    <button name="btn" value="1">Kirjaudu</button>
     </form>
-    <?php
-  
-  $kt = $_POST['kayttajatunnus'];
-  $ss = $_POST['salasana'];
-  $send = $_POST['send'];
 
-  if($send=='true') {
-  
-  $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
-
-  if($my->mysql_errno) {
-  die("MySQL, virhe yhdeyden luonnissa:" . $my->connect_error);
-  }
-
-  $my->set_charset('utf8');
-  $result = $my->query('SELECT kayttajatunnus, salasana
-                        FROM 6659_kayttajat
-                        WHERE kayttajatunnus = '.$kt.'
-                        AND salasana = '.$ss.' ');
-
-  
-  $my->close();
-  }
-
-  ?>
     </div>
   </li>
 </ul>
