@@ -40,6 +40,35 @@
 </nav>
 <article>
 
+<div class="row">
+<div class="small-12 columns">
+<p align="center">Kokkola</p>
+<h3>Toimielimet</h3>
+<?php
+  $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
+
+  if($my->mysql_errno) {
+  die("MySQL, virhe yhdeyden luonnissa:" . $my->connect_error);
+  }
+
+  $my->set_charset('utf8');
+  $result = $my->query('SELECT toimielimet, date, tyyppi
+                        FROM 6659_toimielimet');
+
+  echo '<table>';
+  echo '<tr><th>Toimielin</th><th>Päiväys</th><th>Dokumenttityyppi</th></tr>';
+
+  while($t = $result->fetch_object()) {
+  echo '<tr>';
+  echo '<td>'.$t->toimielimet.'</td>';
+  echo '<td>'.$t->date.'</td>';
+  echo '<td>'.$t->tyyppi.'</td>';
+  echo '</tr>';
+  }
+  echo '</table>';
+
+  $my->close();
+  ?>
 
 </article>
 

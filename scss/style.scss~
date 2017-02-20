@@ -13,27 +13,20 @@ header {
   padding: 5px;
   margin: 0;	
   }
-  h1 {
+  h1, h2, h3, h4, h5, p {
   color: white;
   text-align: center;
   }
-  h3 {
-  text-align: center;
-  }
-  h5 {
-  color: white;
-  text-align: center;
-  }
+  
   p {
   display: inset;
-  background-color: #FFFFFF;
   padding: 1em;
   }
   
 
 .dropbtn {
-    background-color: #4CAF50;
-    color: white;
+    background-color: lightblue;
+    color: blue;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -41,7 +34,8 @@ header {
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+    background-color: blue;
+	 color: lightblue;
 }
 
 .dropdown {

@@ -28,7 +28,7 @@
     onclick="myFunction()">Kirjaudu</a>
     <div class="dropdown-content" id="myDropdown">
     <p>Kirjauduttu hallintapaneeliin
-    <br>
+    <br><br>
     <button onclick="window.location.href='?kill=user'"><strong>Kirjaudu Ulos</strong></button>
     
     </div>
