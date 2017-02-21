@@ -2,10 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Näyttö 3</title>
+  <title><?php $_SERVER['PHP_SELF'] ?></title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" href="node_modules/foundation-sites/dist/css/foundation-sites.css">
-  <link rel="stylesheet" href="node_modules/foundation-sites/dist/css/foundation-sites.min.css">  
+  
 </head>
 <body>
 <header>
@@ -25,7 +24,7 @@
     <div class="dropdown-content" id="myDropdown">
     <form autocomplete="off" method="POST" action="hallinta.php">
     Käyttäjätunnus:<br>
-    <input name="login" value="" placeholder="Käyttäjätunnus">
+    <input type="input" name="login" value="" placeholder="Käyttäjätunnus">
     Salasana:<br>
     <input title="Salasana" type="password" name="passwd"
     value="">
@@ -43,8 +42,8 @@
 
 <div class="row">
 <div class="small-12 columns">
-<p style="color:black;">Kokkola</p>
-<h3 style="color:black;">Toimielimet</h3>
+<p align="center">Kokkola</p>
+<h3>Toimielimet</h3>
 <?php
   $my=mysqli_connect("localhost","data15","jNTKdg3NTbRBuVEn","data15");
 
@@ -70,8 +69,7 @@
 
   $my->close();
   ?>
-</div>
-</div>
+
 </article>
 
 <script>

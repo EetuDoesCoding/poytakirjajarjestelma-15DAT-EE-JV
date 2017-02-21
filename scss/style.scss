@@ -13,15 +13,29 @@ header {
   padding: 5px;
   margin: 0;	
   }
-article {
-  text-align: center;
-}
-  h1, h2, h3, h4, h5, p {
+  h1 {
   color: white;
   text-align: center;
   }
-  
+  h2 {
+  color: black;  
+  text-align: center;
+  }
+  h3 {
+  color: black !important;
+  text-align: center;
+  }
+  h4 {
+  color: black;
+  text-align: center;
+  }
+  h5 {
+  color: black;
+  text-align: center;
+  }
   p {
+  color: black;
+  text-align: center;
   display: inset;
   padding: 1em;
   }
